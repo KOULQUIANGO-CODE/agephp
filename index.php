@@ -17,7 +17,7 @@ include_once 'includes/function/function.php';
         <h2>Contactos</h2>
         <input type="text" id="buscar" class="buscador sombra" placeholder="Buscar Contactos...">
 
-        <p class="total-contactos"><span></span>Contactos</p>
+        <p class="total-contactos"><span></span> Contactos</p>
         <div class="contenedor-tabla">
             <table id="listado-contactos" class="listado-contactos">
                 <thead>
@@ -35,9 +35,6 @@ include_once 'includes/function/function.php';
                         foreach($contactos as $contacto){
                         ?>
                     <tr>
-                        <!-- <pre> -->
-                    <!-- <?php var_dump($contacto) ?> -->
-                    <!-- </pre> -->
                         <td><?php echo $contacto['nombre']?></td>
                         <td><?php echo $contacto['empresa']?></td>
                         <td><?php echo $contacto['telefono']?></td>

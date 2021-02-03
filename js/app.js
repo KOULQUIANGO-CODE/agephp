@@ -29,8 +29,7 @@
                 notificaciones('¡Todos los Campos son Obligatorios!', 'error');
                 // 'error' es una clase del css,se lo pone aqui para optimisar el codigo ('texto a imprimir ','la clase que se agragara')
             } else {
-                document.querySelector("#btn_click").value = "Enviando...";
-                document.querySelector("#btn_click").disabled = true;
+
                 // pasa la validacion, crear llamado a ajax
                 const infoContacto = new FormData(); // es la mejor forma para leer el formulario
                 // append inserta los parametros al final
@@ -42,11 +41,15 @@
                 if (accion === 'crear') {
                     // crearemos un nuevo elemento
                     insertBD(infoContacto);
+                    document.querySelector("#btn_click").value = "Enviando...";
+                    document.querySelector("#btn_click").disabled = true;
                 } else {
                     // editar el 
                     const idRegistro = document.querySelector('#id').value;
                     infoContacto.append('id', idRegistro);
                     actualizarRegistro(infoContacto);
+                    document.querySelector("#btn_click").value = "Guardando...";
+                    document.querySelector("#btn_click").disabled = true;
 
                 }
             }
@@ -221,16 +224,15 @@
         /** Buscador de registros */
         function buscarContactos(e) {
             // console.log(e.target.value);
-            actualizarRegistro();
             const expresion = new RegExp(e.target.value, "i"),
                 registros = document.querySelectorAll('tbody tr');
             registros.forEach(registro => {
                 registro.style.display = 'none';
                 // console.log(registro);
-                // console.log(registro.childNodes[5]);
+                // console.log(registro.childNodes);
                 // para recordar video 636 desde min 4
-                // console.log(registro.childNodes[5].textContent.replace(/\s/g, " ").search(expresion) != -1);
-                if (registro.childNodes[5].textContent.replace(/\s/g, " ").search(expresion) != -1) {
+                // console.log(registro.childNodes[1].textContent.replace(/\s/g, " ").search(expresion) != -1);
+                if (registro.childNodes[1].textContent.replace(/\s/g, " ").search(expresion) != -1) {
                     registro.style.display = 'table-row';
                 }
 
