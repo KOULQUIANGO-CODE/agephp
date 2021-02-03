@@ -48,9 +48,7 @@
                     const idRegistro = document.querySelector('#id').value;
                     infoContacto.append('id', idRegistro);
                     actualizarRegistro(infoContacto);
-                    document.querySelector("#btn_click").value = "Guardando...";
-                    document.querySelector("#btn_click").disabled = true;
-
+                    document.querySelector("#btn_click").value = "Validando...";
                 }
             }
         }
@@ -137,9 +135,12 @@
                     if (respuesta.respuesta === 'correcto') {
                         // mostrar notificación de Correcto
                         notificaciones('Contacto Editado Correctamente', 'correcto');
+                        document.querySelector("#btn_click").value = "Guardando...";
+                        document.querySelector("#btn_click").disabled = true;
                     } else {
                         // hubo un error
                         notificaciones('Hubo un error...', 'error');
+                        document.querySelector("#btn_click").value = "Añadir";
                     }
                     // Después de 3 segundos redireccionar
                     setTimeout(() => {
