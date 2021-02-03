@@ -39,7 +39,7 @@ include_once 'includes/function/function.php';
                         ?>
                     <tr>
                         <!-- <pre> -->
-                    <?php //var_dump($contacto) ?>
+                    <!-- <?php var_dump($contacto) ?> -->
                     <!-- </pre> -->
                         <td><?php echo $contacto['nombre']?></td>
                         <td><?php echo $contacto['empresa']?></td>
