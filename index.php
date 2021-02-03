@@ -65,4 +65,4 @@ include_once 'includes/function/function.php';
     </div>
 </div>
 
-<?php include_once 'includes/layout/footer.php';?>
+<?php include_once 'includes/layout/footer1.php';?>
