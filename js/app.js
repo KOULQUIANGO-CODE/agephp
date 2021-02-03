@@ -18,8 +18,7 @@
         function leerFomulario(e) {
             // evitar mas de un envio del formulario
 
-            document.querySelector("#btn_click").value = "Enviando...";
-            document.querySelector("#btn_click").disabled = true;
+
             e.preventDefault(); // previene que la pagina se recarge
             const
                 nombre = document.querySelector('#nombre').value,
@@ -30,6 +29,8 @@
                 notificaciones('¡Todos los Campos son Obligatorios!', 'error');
                 // 'error' es una clase del css,se lo pone aqui para optimisar el codigo ('texto a imprimir ','la clase que se agragara')
             } else {
+                document.querySelector("#btn_click").value = "Enviando...";
+                document.querySelector("#btn_click").disabled = true;
                 // pasa la validacion, crear llamado a ajax
                 const infoContacto = new FormData(); // es la mejor forma para leer el formulario
                 // append inserta los parametros al final
