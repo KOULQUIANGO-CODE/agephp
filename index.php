@@ -17,7 +17,7 @@ include_once 'includes/function/function.php';
         <h2>Contactos</h2>
         <input type="text" id="buscar" class="buscador sombra" placeholder="Buscar Contactos..">
 
-        <p class="total-contactos"><span></span> Contactos</p>
+        <p class="total-contactos"><span></span>Contactos</p>
         <div class="contenedor-tabla">
             <table id="listado-contactos" class="listado-contactos">
                 <thead>
@@ -65,4 +65,4 @@ include_once 'includes/function/function.php';
     </div>
 </div>
 
-<?php include_once 'includes/layout/footer1.php';?>
+<?php include_once 'includes/layout/footer.php';?>

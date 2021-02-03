@@ -29,4 +29,4 @@
         </form>
     </div>
 
-<?php include_once 'includes/layout/footer1.php';?>
+<?php include_once 'includes/layout/footer.php';?>
