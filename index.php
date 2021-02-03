@@ -30,17 +30,12 @@ include_once 'includes/function/function.php';
                 </thead>
                 <tbody>
                     <?php $contactos = obtenerContactos();?>
-                    <!-- <pre> -->
-                <?php// var_dump($contactos) ?> 
-                    <!-- num_rows el numero de registro --> 
-                    <!-- </pre> -->
+                    
                     <?php if($contactos->num_rows){
                         foreach($contactos as $contacto){
                         ?>
                     <tr>
-                        <!-- <pre> -->
-                    <!-- <?php var_dump($contacto) ?> -->
-                    <!-- </pre> -->
+                       
                         <td><?php echo $contacto['nombre']?></td>
                         <td><?php echo $contacto['empresa']?></td>
                         <td><?php echo $contacto['telefono']?></td>
