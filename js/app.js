@@ -18,8 +18,7 @@
         function leerFomulario(e) {
             // evitar mas de un envio del formulario
 
-            document.querySelector("#btn_click").value = "Enviando...";
-            document.querySelector("#btn_click").disabled = true;
+
             e.preventDefault(); // previene que la pagina se recarge
             const
                 nombre = document.querySelector('#nombre').value,
@@ -106,8 +105,7 @@
                         // Mostrar la notificacion
                         notificaciones('Contacto Creado Correctamente', 'correcto');
                         // volver habilitar el boton de añadir
-                        document.querySelector("#btn_click").value = "Añadir";
-                        document.querySelector("#btn_click").disabled = false;
+
 
                         // Actualizar el número
                         numeroContactos();
